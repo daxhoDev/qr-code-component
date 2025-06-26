@@ -1,8 +1,9 @@
 import QRCard from "./QRCard";
+import qr from "./../assets/image-qr-code.png";
 
 export default function App() {
   return (
-    <QRCard qr="./assets/image-qr-code.png">
+    <QRCard qr={qr}>
       <h1 className="header">
         Improve your front-end skills by building projects
       </h1>
