@@ -5,6 +5,9 @@ $slate-300: hsl(212, 45%, 89%);
 $slate-500: hsl(216, 15%, 48%);
 $slate-900: hsl(218, 44%, 22%);
 
+$default-space: 1rem;
+$default-border-radius: 20px;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,15 +15,46 @@ $slate-900: hsl(218, 44%, 22%);
 
 body {
   background-color: $slate-300;
-  font-family: Outfit, sans-serif;
+  font-family: "Outfit", sans-serif;
+  height: 100dvh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .qr-card {
   background-color: $white;
   width: 20rem;
-  padding: 1rem;
+  padding: $default-space;
+  border-radius: $default-border-radius;
+
+  display: flex;
+  flex-direction: column;
+  gap: $default-space;
+
+  text-align: center;
+
+  box-shadow: 0 0 16px #00000005;
 }
 
 .qr-image {
   width: 100%;
+  border-radius: calc($default-border-radius * 0.75);
+}
+
+.header {
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+
+  color: $slate-900;
+  font-weight: 700;
+}
+
+.message {
+  margin: 0 calc($default-space / 2);
+  margin-bottom: $default-space;
+
+  color: $slate-500;
+  font-weight: 400;
 }
